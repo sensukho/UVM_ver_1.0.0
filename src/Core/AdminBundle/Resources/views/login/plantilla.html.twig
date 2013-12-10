@@ -1,0 +1,68 @@
+{% extends 'CoreAdminBundle:login:layout.html.twig' %}
+{% block content %}
+
+    <div class="container">
+    <table border="0px" width="100%" height="auto" cellspacing="3" cellpading="3">
+        <!--  BANER SUPERIOR -->
+        <tr cellspan="3">
+            <td align="center"><img src="/web/bundles/login/imgs/BannerT.jpg"></td>
+        </tr>
+    <!--  IMPRESION DE MENSAJES (NO MODIFICAR) -->
+    {% if msg %}
+        <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+        <tr><td><div id="msg">{{ msg }}</div></td></tr>
+    {% endif %}
+        <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+        <tr>
+            <td width="80%" align="center">
+                <form method=POST action="{{ path('portal') }}">
+                <table class="table_first" border="0px" width="40%" height="auto" cellspacing="5" cellpading="5">
+                    <tr>
+                        <td><font size="5">Usuario:</font></td>
+                        <td><input type="text" name="username" placeholder="nombre de usuario" value="{{ user }}" required/></td>
+                    </tr>
+                    <tr>
+                        <td><font size="5">Password:</font></td>
+                        <td><input type="password" name="password"  placeholder="contraseña" value="{{ pass }}" required/></td>
+                    </tr>
+                    <!--  IMPRIME EL CHECKBOX (NO MODIFICAR) -->
+                    <tr>
+                        <td align="right"><input type="checkbox" name="chk_rec" value="chk_rec" {{ chk }} ></td>
+                        <td align="left">Recordar usuario y contrase&ntilde;a</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="right"><input type="submit" name="entrar" value="Ingresar"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;<br />&nbsp;</td>
+                    </tr>
+                    <!--  IMPRIME LOS BOTONES DE REGISTRO Y RECUPERACION (NO MODIFICAR) -->
+                    <tr>
+                        <!--
+                        <td align="left"><a href="register"><button type="button" name="" value="" class="css3button">Registro</button></a></td>
+                        <td align="right"><a href="resetpass"><button type="button" name="" value="" class="css3button">Recuperar contraseña</button></a></td>
+                        -->
+                        <td align="left"><a href="register">Registro</a></td>
+                        <td align="right"><a href="resetpass">Recuperar contraseña</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;<br /><font size="2">Para tener acceso a la red WiFi de UVM es necesario realizar el proceso de <a href="register"><b>REGISTRO</b></a> utilizando la liga que aparece arriba. <br><br>Si tienes problemas para registrarte o para navegar por favor acude al Centro de Cómputo de tu campus.</font></td>
+
+                    </tr>
+                </table>
+                </form>
+            </td>
+        </tr>
+        <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+        <!--  BANER SUPERIOR -->
+        <tr>
+            <td align="center"><img src="/web/bundles/login/imgs/BannerH.jpg"</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

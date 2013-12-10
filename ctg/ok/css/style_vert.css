@@ -1,0 +1,596 @@
+/* CSS Document */
+
+* {
+	margin: 0; 
+	padding: 0; 
+}
+
+body {
+	width:100%;
+	height:100%;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	overflow-x:hidden;
+
+	
+}
+
+
+
+
+#header {
+	margin:auto;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:56px;
+	right:0px;
+	overflow:hidden;
+	background-color:#2d8bcf;
+	z-index:12;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+#logo {
+	position: fixed;
+	z-index:1550;
+	top:0;
+	float:left;
+}
+
+#elclub {
+	position:fixed;
+	z-index:1560;
+	top:0;
+	right:0;
+	float:right;
+	
+}
+
+
+#menu ul{
+list-style-type: none;
+margin: 0;
+padding-top: 17px;;
+float:right;
+margin-right:1%;
+}
+ 
+#menu ul li{
+list-style-type: none;
+color: #fff;
+display: inline;
+margin: 0;
+padding: 0 10px 0 10px;
+}
+ 
+#menu ul li a{
+text-decoration: none;
+list-style-type: none;
+color: #fff;
+display: inline;
+margin: 0;
+padding: 0;
+}
+ 
+#menu ul li a:hover{
+text-decoration: none;
+list-style-type: none;
+color:#CCC;
+display: inline;
+margin: 0;
+padding: 0;
+}
+
+
+.submenu {
+	position: absolute;
+	display: none;
+	
+}
+
+
+.submenu li:hover {
+	display: block;
+}
+	
+.submenu li ul li { 
+	float: none; 
+	display: inline; 
+}
+
+	
+#facebook {
+	background:url(../img/fbsprite.png);
+	background-repeat:no-repeat;
+	width:25px;
+	height:25px;
+	text-indent:-9999px;
+	display: block;
+	float:right;
+	margin-right:1%;
+	margin-top:16px;
+	z-index:15;
+
+	
+	
+}
+
+#facebook a:hover{
+	background-position:-25;
+	
+}
+
+
+#twitter {
+	background:url(../img/twttrsprite.png);
+	background-repeat:no-repeat;
+	width:25px;
+	height:25px;
+	text-indent:-9999px;
+	float:right;
+	margin-right:16%;
+	margin-top:16px;
+	
+}
+
+#page-wrap {
+	width:100%;
+	height:100%;
+	margin-top:65px;
+	margin-left:0px;
+	
+}
+
+
+#inicio {
+	width:1366px;
+	height:603px;
+	vertical-align: top;
+	margin-top:-43px;
+	
+}
+
+#videoinicio {
+	margin-left:-2%;
+	margin-top:-2%;
+	position: relative;
+	z-index:-2;
+	float:left;
+}
+
+
+#video {
+	width:100%;
+	margin-top:198px;
+	position:absolute;
+	margin-left:196px;
+	z-index:2;
+}
+
+
+#video2 {
+	position:absolute;
+	margin-left:3195px;
+	margin-top:24px;
+	
+}
+
+
+#muchospremios {
+	margin:auto;
+	margin-top:-6%;
+	margin-left:80px;
+	z-index:5;
+	float:left;
+}
+
+#muchospremios img {
+	max-width:80%;
+	
+}
+
+
+#caja {
+	float:right;
+	margin-top:-37%;
+	margin-right:5%;
+	max-width:80%;
+}
+
+
+#premios {
+	width:1366px;
+	height:603px;
+	vertical-align:middle;
+	margin-left:80px;
+	
+}
+
+#premiomensual {
+	float:left;
+	margin-top:5px;
+	
+}
+
+#premiosemanal {
+	float:right;
+	margin-right:2%;
+	
+}
+
+#recompensas {
+	float:right;
+	margin-right:4%;
+	
+}
+
+#ganadores {
+	width:1366px;
+	height:603px;
+	vertical-align:top;
+	margin-left:80px;
+	
+}
+
+
+.ganadoreslinea {
+	display:inline;
+	max-height:60%;
+	margin-left:3%;
+	margin-top:-1%;
+	
+}
+
+#ganadorestop {
+	max-height:70%;
+	margin-top:-5%;
+	margin-left:15%;
+}
+
+#ganadormensual {
+	float:left;
+	margin-left:3%;
+	margin-top:5%;
+	
+}
+
+#ganadorsemanal {
+	float:left;
+	margin-top:-30px;
+	
+}
+
+#ganadordiario {
+	float: left;
+	
+}
+
+
+.post {
+	width:1366px;
+	
+}
+
+#comoganar {
+	vertical-align:top;
+	width:1360px;
+	height:603px;
+	margin-left:80px;
+	
+}
+
+
+#video3 {
+	margin-left:600px;
+	margin-top:-8%;
+	
+}
+
+
+#txtocomoganar{
+	margin-left:120px;
+	margin-top:4%;
+
+	
+}
+
+#bannerpremiomensual {
+	float:left;
+	margin-top:5%;
+	margin-left:12%;
+	padding-bottom:5px;
+}
+
+#bannerganadormensual {
+	float:left;
+	margin-top:5%;
+	margin-left:12%;
+	padding-bottom:5px;
+	
+}
+
+
+
+#lagaleriamensual {
+	float:left;
+	margin-top:0%;
+	margin-left:0;
+	
+}
+
+#lagaleriaganadormensual {
+	float:left;
+	margin-top:4%;
+	margin-left:167px;
+	
+}
+
+
+#lagaleriaganadormensual img {
+	border:dotted;
+	border-width:1px;
+	border-color:#fff;
+	
+
+}
+
+
+#bannerfecha {
+	position:absolute;
+	margin-top:29%;
+	margin-left:380px;
+	
+}
+
+#bannerfecha h2 {
+	position:absolute;
+	margin-top:-92%;
+	margin-left:43px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:21px;
+	color:#fff;
+	
+}
+
+
+ul#menuganadores {
+	width:100%;
+	height:100%;
+	clear: both;
+float: right;
+list-style:none;
+margin-top:80px;
+margin-right:165px;
+border-bottom:1px solid #fff; /*Remove to create tab effect*/
+width:658px; /*If tab effect is not being used, this will define how long the bottom border will be*/
+
+}
+
+ul#menuganadores li {
+display: inline;
+list-style: none;
+
+}
+
+
+ul#menuganadores li a {
+margin-right:5px;
+color: #FFFFFF;
+display: block;
+float:left;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+line-height: 32px;
+text-decoration: none;
+vertical-align: middle;
+padding: 0 10px;
+background-color:#1251b0;
+border:1px solid #0e418d;
+border-bottom:none;
+width:135px;
+
+}
+
+ul#menuganadores h2{
+	line-height:10px;
+	padding-bottom:8px;
+		color:#f6bf03
+}
+
+ul#menuganadores li a:hover {
+	background-color:#247dd9;
+	
+}
+
+ul#menuganadores h2 a:hover {
+	color:#fff;
+
+}
+
+ul#menuganadores img {
+	border:none;
+	width:14%;
+	float:left;
+	padding:5px 5px 3px 3px;
+	margin-bottom:0px;
+	
+}
+
+
+.txtosganadores {
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	background-color:#f6bf03;
+	width:220px;
+	font-size:12px;
+	padding-left: 5px;
+	color:#1251b0;
+	border-radius:3px;
+	
+}
+
+
+
+
+#lagaleriamensual img {
+	border: #FFF;
+	border-style: dotted;
+	border-width:1px;
+	margin-bottom:30px;
+	
+}
+
+
+#lagaleriasemanal {
+	z-index:599;
+	margin-top:5%;
+	float:left;
+
+	
+}
+
+#bannerpremiosemanal {
+	float:left;
+	margin-top:-9%;
+	margin-left:1%;
+	
+}
+
+#bannerpremiodiario {
+	float:left;
+	margin-top:3%;
+	margin-left:15%;
+}
+
+#bannerganadordiario {
+		float:left;
+	margin-top:3%;
+	margin-left:15%;
+	
+}
+
+#lagaleriasemanal img {
+
+	border: #FFF;
+	border-style: dotted;
+	border-width:1px;
+	text-align:center;
+	margin-bottom:30px;
+
+	
+}
+
+#lagaleriaganadorsemanal img {
+	border: #FFF;
+	border-style: dotted;
+	border-width:1px;
+	text-align:center;
+}
+
+
+
+
+#lagaleriaganadorsemanal {
+	margin-left:166px;
+	float:left;
+	margin-top:4%;
+}
+
+#lagaleriadiaria {
+	margin-top:8%;
+	margin-left:0px;
+	margin-bottom:100px;
+	float:left;
+	
+}
+
+#lagaleriadiaria img {
+	border: #FFF;
+	border-style: dotted;
+	border-width:1px;
+}
+
+
+#lagaleriaganadordiario {
+	padding-top:3%;
+	margin-left:166px;
+
+}
+
+
+
+#lagaleriaganadordiario img {
+	border: #FFF;
+	border-style: dotted;
+	border-width:1px;
+	margin-bottom:30px;
+}
+
+
+#footer {
+	position: fixed;
+	margin:auto;
+    bottom: 0;
+	left:0;
+    height:100px;
+    width:auto;
+	overflow: hidden;
+	background-color:#072446;
+	padding-top:0px;
+	font-family: "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, sans-serif;
+	padding-left:5px;
+	padding-right:5px;
+	z-index:300;
+	
+}
+
+#left {
+	width:50%;
+	float:left;
+}
+
+#left p {
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	color:#ccc;
+	padding-top:8px;
+	text-align:justify;
+}
+
+#right {
+	width:50%;
+	float:right;
+}
+
+#zell {
+	padding-top:15px;
+	padding-left:20px;
+	float:left;
+	
+}
+
+#txtcta {
+	padding-top:15px;
+	line-height:20px;
+	margin-left:2%;
+}
+
+#txtcta h3 {
+	font-size:18px;
+	color:#fff;
+	float:left;
+	
+}
+
+#txtcta p {
+	font-size:10px;
+	color:#CCC;
+}
+
+#btn {
+	float:right;
+	margin-top:-13%;
+	margin-right:6%;
+	
+}

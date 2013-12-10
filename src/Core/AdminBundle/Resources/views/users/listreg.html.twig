@@ -1,0 +1,85 @@
+{% extends 'CoreAdminBundle:admin:layout.html.twig' %}
+{% block content %}
+    
+    <div class="container">
+
+        <div class="hero-unit">
+            <h1>Usuarios :: Registrados</h1>
+            <p></p>
+        </div>
+
+        <form name="zd_form" method="POST" action="{{ path('admin_usuarios_listar_reg', {session: session, q: 0, offset: 1}) }}">
+            <table border="0" width="80%" align="center">
+                <tr>
+                    <th align="right" valign="top"><font size="4"><input type="text" name="q" placeholder="Buscar..." value="" style="height:30px; width: 200px;" required/></font> <input type="submit" name="entrar" style="height:25px; width: 70px;" value="Buscar"></th>
+                    </th>
+                </tr>
+            </table>
+        </form>
+
+        <div>&nbsp;</div>
+
+        <div class="row">
+            <table id="listuser" border="" width="88%" align="center">
+                <tr>
+                    <th style="background-color:#333; color:#fff;" align="left";>Páginas: 
+                {% for i in range(1, total_pages) %}
+                    <a href="{{ path('admin_usuarios_listar_reg', {session: session, q: q, offset: i}) }}">&nbsp;{{ i }}&nbsp;</a>
+                {% endfor %}
+                    </th>
+                </tr>
+            </table>
+            <table id="listuser" border="1" width="90%" align="center">
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="35%">Nombre (Usuario)</th>
+                    <th width="20%">MAC ADDRESS 1</th>
+                    <th width="20%">MAC ADDRESS 2</th>
+                    <th width="5%">Campus</th>
+                    <th width="5%">Categoria</th>
+                    <th width="5%">Editar</th>
+                    <th width="5%">Eliminar</th>
+                </tr>
+                {% set j = ((offset-1)*100)+1 %}
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ j }}</td>
+                    <td>{{ usuario.firstname }} {{ usuario.secondname }} ({{ usuario.username }})</td>
+                        {% set i = 0 %}
+                        {% if usuario.value == true %}
+                            {% for data in usuario.value %}
+                                <td align="center">{{ data.macaddress }}</td>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                            {% if i < 2 %}
+                                <td></td>
+                            {% endif %}
+                        {% else %}
+                            <td></td>
+                            <td></td>
+                        {% endif %}
+                    <td align="center">{{ usuario.campus }}</td>
+                    <td align="center">{{ usuario.tipo }}</td>
+                    <td align="center"><a href="{{ path('admin_usuarios_modificar', {session: session_id, id: usuario.id, usr: usuario.username}) }}"><img src="{{ asset('bundles/core/img/users/edit.png') }}" width="22px"></a></td>
+                    <td align="center"><a href="{{ path('admin_usuarios_eliminar', {session: session_id, id: usuario.id}) }}"><img src="{{ asset('bundles/core/img/users/del.png') }}" width="22px"></a></td>
+                </tr>
+                {% set j = j + 1 %}
+                {% endfor %}
+            </table>
+            <table id="listuser" border="" width="88%" align="center">
+                <tr>
+                    <th style="background-color:#333; color:#fff;" align="left";>Páginas: 
+                {% for i in range(1, total_pages) %}
+                    <a href="{{ path('admin_usuarios_listar_reg', {session: session, q: q, offset: i}) }}">&nbsp;{{ i }}&nbsp;</a>
+                {% endfor %}
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <hr>
+
+        <footer></footer>
+
+    </div>
+
+{% endblock %}

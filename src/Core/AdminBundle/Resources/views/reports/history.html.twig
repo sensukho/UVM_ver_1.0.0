@@ -1,0 +1,42 @@
+{% extends 'CoreAdminBundle:admin:layout.html.twig' %}
+{% block refresh %}<meta http-equiv="refresh" content="30">{% endblock %}
+{% block content %}
+    
+    <div class="container">
+
+        <div class="hero-unit">
+            <h1>Reportes :: Historial</h1>
+            <p></p>
+        </div>
+
+        <div class="row">
+            <table id="listuser" border="1" width="80%" align="center">
+                <tr>
+                    <th width="4%">#</th>
+                    <th width="31%">Usuario( IP )</th>
+                    <th width="14%">Tiempo Activo</th>
+                    <th width="13%">Recibidos</th>
+                    <th width="13%">Enviados</th>
+                    <th width="25%">SSID</th>
+                </tr>
+                {% set i = 1 %}
+                {% for usuario in usuarios %}
+                <tr>
+                    <th>{{ i }}</th>
+                    <th align="left">&nbsp;&nbsp;&nbsp;{{ usuario.username }} ( {{ usuario.framedipaddress }} )</th>
+                    <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ usuario.acctsessiontime }}</th>
+                    <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ usuario.acctinputoctets }} Mb.</th>
+                    <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ usuario.acctoutputoctets }} Mb.</th>
+                    <th>{{ usuario.calledstationid }}</th>
+                </tr>
+                {% set i = i + 1 %}
+                {% endfor %}
+            </table>
+        </div>
+        <hr>
+
+        <footer></footer>
+
+    </div>
+
+{% endblock %}

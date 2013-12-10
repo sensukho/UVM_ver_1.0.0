@@ -1,0 +1,48 @@
+{% extends 'CoreAdminBundle:login:layout.html.twig' %}
+{% block content %}
+        
+        <div class="container">
+            <table border="0px" width="100%" height="auto" cellspacing="3" cellpading="3">
+                <!--  BANER SUPERIOR -->
+                <tr cellspan="3">
+                    <td align="center"><img src="bundles/login/imgs/BannerH.jpg"></td>
+                </tr>
+                <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+                <tr>
+                    <td width="80%" align="center">
+                        <table border="0px" width="80%" height="auto" cellspacing="3" cellpading="3">
+                            {% if msg %}
+                            <tr><div id="msg">{{ msg }}<div></tr>
+                            {% endif %}
+                            <tr>&nbsp;</tr>
+                            <tr>
+                                <td width="80%" align="left">
+                                    <div style="margin-left:100px;">{{ form(form) }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <tdalign="center">&nbsp;</td>
+                            </tr>
+                        </table>
+                        <!--  IMPRIME LOS BOTONES DE REGISTRO Y RECUPERACION (NO MODIFICAR) -->
+                        <table border="0px" width="50%" height="auto" cellspacing="3" cellpading="3">
+                        <tr>
+                            <!--
+                            <td width="50%" align="left"><a href="login"><button type="button" name="" value="" class="css3button">Ingreso</button></a></td>
+                            <td align="right"><a href="register"><button type="button" name="" value="" class="css3button">Registro</button></a></td>
+                            -->
+                            <td width="50%" align="left"><a href="login">Ingreso</a></td>
+                            <td align="right"><a href="register">Registro</a></td>
+                        </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+                <!--  BANER SUPERIOR -->
+                <tr>
+                    <td align="center"><img src="bundles/login/imgs/BannerH.jpg"</td>
+                </tr>
+            </table>
+        </div>
+        
+{% endblock %}

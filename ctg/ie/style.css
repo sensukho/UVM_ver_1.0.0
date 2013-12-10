@@ -1,0 +1,38 @@
+/* CSS Document */
+
+body{
+	background-color: #072446;
+}
+
+#footer {
+	position: fixed;
+	margin:auto;
+    bottom: 0;
+	left:0;
+    height:120px;
+    width:100%;
+	overflow: hidden;
+	background-color:transparent;
+	padding-top:0px;
+	font-family: "Arial","Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, sans-serif;
+	padding-left:5px;
+	padding-right:5px;
+	z-index:300;
+	border: 0px solid #000;
+}
+img{
+	border: 0px;
+}
+
+#img{
+	border: 0px solid #000;
+	position: relative;
+	left:auto;
+}
+#legals{
+	background-color:#072446;
+	text-align: center;
+}
+#logo{
+	margin-left: 50px;
+}

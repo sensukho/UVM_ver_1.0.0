@@ -1,0 +1,38 @@
+{% extends 'CoreAdminBundle:admin:layout.html.twig' %}
+{% block content %}
+    
+    <div class="container">
+
+        <div class="hero-unit">
+            <h1>Usuarios :: Eliminar</h1>
+            {% if msg %}
+            <p><div id="msg">{{ msg }}</div></p>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <form name="ususrios" action="{{ path('admin_usuarios_eliminar', {session: session_id, id: usuario.id}) }}" method="POST">
+                <table border="1" width="500px" align="center">
+                    <tr>
+                        <th width="35%">ID</th>
+                        <th width="35%">Usuario</th>
+                        <th width="15%"></th>
+                    </tr>
+                    <tr>
+                        <td>{{ usuario.id }}</td>
+                        <td>{{ usuario.username }}</td>
+                        <td align="center">
+                            <input type="hidden" name="confirm" value="ok">
+                            <input type="image" src="{{ asset('bundles/core/img/users/aprove.png') }}" width="32px" value="Submit" alt="Submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <hr>
+
+        <footer></footer>
+
+    </div>
+
+{% endblock %}

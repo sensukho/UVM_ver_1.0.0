@@ -1,0 +1,28 @@
+{% extends 'CoreAdminBundle:admin:layout.html.twig' %}
+{% block content %}
+    
+    <div class="container">
+
+        <div class="hero-unit">
+            <h1>Usuarios :: Agregar</h1>
+            {% if msg %}
+            <p><div id="msg">{{ msg }}</div></p>
+            {% endif %}
+        </div>
+
+        <div class="row">
+                <table border="0" width="100%">
+                    <tr align="left">
+                        <th width="20%"></th>
+                        <th width="60%"> {{ form(form) }} </th>
+                        <th width="20%"></th>
+                    </tr>
+                </table>
+        </div>
+        <hr>
+
+        <footer></footer>
+
+    </div>
+
+{% endblock %}

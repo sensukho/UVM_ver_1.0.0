@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>CTG-DEMO</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	</head>
+	<body>
+			<script>
+				$(document).ready(function() {
+					if ($.browser.msie) {//ie
+						var version = parseInt($.browser.version);
+						if (version <= 8) {
+							//alert("Ver. IE!");
+							location.href="ie/home/";
+						}
+					} else {
+						//alert("Ver. Chome!");
+						location.href="ok/";
+					}
+				});
+			</script>
+	</body>
+</html>
+

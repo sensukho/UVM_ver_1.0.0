@@ -1,0 +1,4 @@
+core_admin:
+    resource: "@CoreAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+

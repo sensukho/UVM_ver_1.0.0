@@ -1,0 +1,16 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: xradius
+    database_user: root
+    database_password: 32274105
+    mailer_transport: smtp
+    mailer_host: smtp.gmail.com
+    mailer_user: soporte@fastweb.com.mx
+    mailer_encryption: ssl
+    mailer_auth_mode: login
+    mailer_password: soport312
+    locale: es
+    secret: f4stw3b4102

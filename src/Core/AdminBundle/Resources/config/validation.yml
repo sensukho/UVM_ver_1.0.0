@@ -1,0 +1,14 @@
+Core\AdminBundle\Entity\Users:
+    properties:
+        username:
+            - Length:
+                min: 5
+                minMessage: "El campo usuario debe contener mínimo {{ limit }} caracteres."
+        newpass:
+            - Length:
+                min: 6
+                minMessage: "El password1 debe contener mínimo {{ limit }} caracteres."
+        email:
+            - Email:
+                message: "El email {{ value }} no es válido."
+                checkMX: true

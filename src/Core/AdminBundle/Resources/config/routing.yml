@@ -1,0 +1,85 @@
+##### ADMINISTRATOR :: LOGIN #####
+
+admin:
+    pattern:  /admin
+    defaults: { _controller: CoreAdminBundle:Admin:admin }
+
+admin_login:
+    pattern:  /admin/login
+    defaults: { _controller: CoreAdminBundle:Admin:login }
+
+admin_home:
+    pattern:  /admin/{session}
+    defaults: { _controller: CoreAdminBundle:Admin:home }
+
+##### ADMINISTRATOR :: USUARIOS #####
+
+admin_usuarios_crear:
+    pattern:  /admin/users/new/{session}
+    defaults: { _controller: CoreAdminBundle:Users:new }
+
+admin_usuarios_modificar:
+    pattern:  /admin/users/edit/{session}/{id}/{usr}
+    defaults: { _controller: CoreAdminBundle:Users:edit }
+
+admin_usuarios_eliminar:
+    pattern:  /admin/users/del/{session}/{id}
+    defaults: { _controller: CoreAdminBundle:Users:del }
+
+admin_usuarios_listar_reg:
+    pattern:  /admin/users/listreg/{session}/{q}/{offset}
+    defaults: { _controller: CoreAdminBundle:Users:listreg }
+
+admin_usuarios_listar_unreg:
+    pattern:  /admin/users/listunreg/{session}/{q}/{offset}
+    defaults: { _controller: CoreAdminBundle:Users:listunreg }
+
+admin_reset_macs:
+    pattern:  /admin/users/resetmacs
+    defaults: { _controller: CoreAdminBundle:Users:resetmacs }
+
+##### ADMINISTRATOR :: REPORTES #####
+
+admin_reportes_activos:
+    pattern:  /admin/reports/active/{session}
+    defaults: { _controller: CoreAdminBundle:Reports:active }
+
+admin_reportes_historial:
+    pattern:  /admin/reports/history/{session}
+    defaults: { _controller: CoreAdminBundle:Reports:history }
+
+##### PORTAL :: LOGIN #####
+
+#start:
+#    pattern:  /
+#    defaults: { _controller: CoreAdminBundle:Login:login }
+
+portal:
+    pattern:  /login
+    defaults: { _controller: CoreAdminBundle:Login:login }
+
+portal_alums:
+    pattern:  /login/estudiantes/
+    defaults: { _controller: CoreAdminBundle:Login:login }
+
+portal_profesors:
+    pattern:  /login/docentes/
+    defaults: { _controller: CoreAdminBundle:Login:login }
+
+portal_register:
+    pattern:  /register
+    defaults: { _controller: CoreAdminBundle:Login:register }
+
+portal_reset_pass:
+    pattern:  /resetpass
+    defaults: { _controller: CoreAdminBundle:Login:reset }
+
+portal_change_pass:
+    pattern:  /changepass
+    defaults: { _controller: CoreAdminBundle:Login:change }
+
+portal_welcome:
+    pattern:  /bienvenida.{_format}
+    defaults: { _controller: CoreAdminBundle:Login:welcome, _format: html }
+    requirements:
+      _format:  html

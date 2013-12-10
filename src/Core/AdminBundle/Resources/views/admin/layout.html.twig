@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {% block refresh %}{% endblock %}
+        <title>:: Administración ::</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ asset('bundles/core/css/bootstrap.min.css') }}">
+        <style>
+            body {
+                background-color: #fff;
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            #msg{
+                background-color: #17039b;
+                border: 0px solid #000;
+                text-align: center;
+                color: #FFF;
+                font-size: 16px;
+                padding: 5px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ asset('bundles/core/css/bootstrap-responsive.min.css') }}">
+
+        <script src="{{ asset('bundles/core/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+{% if session_id == session %}
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/">Portal :: Administración</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="{{ path('admin_home', {session: session_id}) }}">Inicio</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-header">Administrar</li>
+                                    <li><a href="{{ path('admin_usuarios_crear', {session: session_id}) }}">Crear</a></li>
+                                    <li><a href="{{ path('admin_usuarios_listar_reg', {session: session_id, q: 0, offset: 1}) }}">Registrados</a></li>
+                                    <li><a href="{{ path('admin_usuarios_listar_unreg', {session: session_id, q: 0, offset: 1}) }}">Pendientes</a></li>
+                                    <!--<li class="divider"></li>-->
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Ayuda</li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path('admin_reportes_activos', {session: session_id}) }}">Activos</a></li>
+                                    <li><a href="{{ path('admin_reportes_historial', {session: session_id}) }}">Historial</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Ayuda</li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Cobranza</a></li>
+                            <li><a href="#">Notificaciones</a></li>
+                            <li><a href="{{ path('admin') }}">Salir</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        {% block content %}{% endblock %}
+{% endif %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ asset('bundles/core/js/vendor/jquery-1.10.1.min.js') }}"><\/script>')</script>
+
+        <script src="{{ asset('bundles/core/js/vendor/bootstrap.min.js') }}"></script>
+
+        <script src="{{ asset('bundles/core/js/main.js') }}"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

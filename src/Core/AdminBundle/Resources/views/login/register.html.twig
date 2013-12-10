@@ -1,0 +1,62 @@
+{% extends 'CoreAdminBundle:login:layout.html.twig' %}
+{% block content %}
+        
+        <table border="0px" width="100%" height="auto" cellspacing="3" cellpading="3">
+            <!--  BANER SUPERIOR -->
+            <tr cellspan="3">
+                <td align="center"><img src="bundles/login/imgs/BannerH.jpg"></td>
+            </tr>
+            <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+            <tr>
+                <td width="80%" align="center">
+                    <div class="container">
+
+                        <table border="0px" width="80%" height="auto" cellspacing="3" cellpading="3">
+                            {% if msg %}
+                            <tr cellspan="2"><td><div id="msg">{{ msg }}<div></td></tr>
+                            {% endif %}
+                            {% if errors %}
+                            {% for error in errors %}
+                            <tr cellspan="2"><td><div id="msg">{{ error.message }}<div></td></tr>
+                            {% endfor %}
+                            {% endif %}
+                            <tr cellspan="2"><td>&nbsp;</td></tr>
+                            <!--
+                            <tr cellspan="2"><td align="center"><font size="3" color="#17039b">Llenar los siguientes campos tal y como están registrados en el sistema UVM.<br>Utilizar letras "Ñ" pero NO utilizar acentos.</td></tr>
+                            -->
+                            <tr cellspan="2"><td>&nbsp;</td></tr>
+                            <tr>
+                                <td width="60%" align="left">
+                                    <div style="margin-left:100px;">{{ form(form) }}</div>
+                                </td>
+                                <td width="10%" align="center"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<br />&nbsp;</td>
+                            </tr>
+                        </table>
+                        <!--  IMPRIME LOS BOTONES DE REGISTRO Y RECUPERACION (NO MODIFICAR) -->
+                        <table border="0px" width="50%" height="auto" cellspacing="3" cellpading="3">
+                        <tr>
+                            <!--
+                            <td width="50%" align="left"><a href="login"><button type="button" name="" value="" class="css3button">Ingreso</button></a></td>
+                            <td align="right"><a href="resetpass"><button type="button" name="" value="" class="css3button">Recuperar contraseña</button></a></td>
+                            -->
+                            <td width="50%" align="left"><a href="login">Ingreso</a></td>
+                            <td align="right"><a href="resetpass">Recuperar contraseña</a></td>
+                        </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr cellspan="3"><td>&nbsp;<br />&nbsp;</td></tr>
+            <!--  BANER SUPERIOR -->
+            <tr>
+                <td align="center"><img src="bundles/login/imgs/BannerH.jpg"</td>
+            </tr>
+        </table>
+        
+{% endblock %}
