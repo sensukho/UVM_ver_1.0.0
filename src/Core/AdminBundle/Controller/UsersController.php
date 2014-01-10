@@ -265,7 +265,7 @@ class UsersController extends Controller
 
             $mensaje = 'Usuario eliminado con éxito !';
             $usuarios = $em->getRepository('CoreAdminBundle:radcheck')->findAll();
-            return $this->redirect( $this->generateUrl('admin_usuarios_listar_reg', array( 'session' => $session, 'offset' => '1', 'session_id' => $session, 'msg' => $mensaje, 'usuarios' => $usuarios )) );
+            return $this->redirect( $this->generateUrl('admin_usuarios_listar_reg', array( 'session' => $session, 'offset' => '1', 'session_id' => $session, 'msg' => $mensaje, 'usuarios' => $usuarios, 'q' => '0' )) );
         }else{
             $mensaje = '¿Seguro que desea eliminar al usuario?';
         }

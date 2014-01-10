@@ -8,7 +8,3 @@ Core\AdminBundle\Entity\Users:
             - Length:
                 min: 6
                 minMessage: "El password1 debe contener mínimo {{ limit }} caracteres."
-        email:
-            - Email:
-                message: "El email {{ value }} no es válido."
-                checkMX: true

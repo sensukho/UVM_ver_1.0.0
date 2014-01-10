@@ -1,0 +1,91 @@
+{% extends 'CoreAdminBundle:login:layout_new.html.twig' %}
+{% block content %}
+
+<div id="contentbg" class="inv-box" style="">
+<!-- Title -->
+        <div id="title" class="" style="">            
+            <img src="/web/bundles/login/img/logo.jpg">
+        </div>
+        <hr><hr>
+        <div id="phone-call"><span class="tblue">
+            <center><img src="/web/bundles/login/img/BannerT.jpg"></center>
+        </div>
+
+        <hr>
+<!-- End Title -->
+<!-- Content -->
+<!-- Start Form -->
+    <div id="cform" class="card move-form" style="">
+        <h4 class="tc">Ingreso</h4>
+        <p style="text-align:justify;">Para tener acceso a la red WiFi de UVM es necesario realizar el proceso de <b>REGISTRO</b> utilizando el botón que aparece debajo.</p>
+        <form id="inquiry" class="input-glow">
+
+            <br />
+            <ul class="mpf">
+                <label for="conName">Usuario</label><input type="text" id="conName" name="conName" value="">
+            </ul>
+            <ul class="mpf">
+                <label for="conEmail">Contraseña</label><input type="email" id="conEmail" name="conEmail" value="">
+            </ul>
+            <ul class="mpf">
+
+                <label>&nbsp;</label><a id="sub-a" class="button blue sub-btn" href="">Ingresar</a>
+            </ul> 
+        </form>
+        <div id="buttons">
+            <a id="fb-a" class="facebook button" href="">Registro</a> &nbsp;
+            <a id="li-a" class="linkedin button" href="">Recuperar contraseña</a>
+        </div>
+
+        <p style="text-align:justify;">Si tienes problemas para registrarte o para navegar por favor acude al Centro de Cómputo de tu campus.</p>
+    </div>
+<!-- End Form -->
+<!-- Start Right Column -->
+    <div id="rightClip" class="mobile-remove">
+        <!-- Start Widgets -->
+        <div id="widgets" style="left:40px">
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/increasing-value.png" style="">
+
+                <p class="mpf widget-text" style=""><h2>Bienvenido.</h2></p>
+            </div>      
+<!--
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/top5.png" style="">
+                <p class="mpf widget-text" style="">There are 250 million domain names registered, but our experts agree: Approximately 5% are as good as this or better.</p>
+            </div>      
+
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/rare.png" style="">
+                <p class="mpf widget-text" style="">The premium marketplace at DomainNameSales.com only features rare and brandable names like UVM.com.</p>
+            </div>      
+
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/Globe.png" style="">
+                <p class="mpf widget-text" style="">Good one word domain names are rare. UVM.com is among approximately 1,873 related names available for the world to share.</p>
+            </div>      
+
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/general.png" style="">
+                <p class="mpf widget-text" style="">UVM.com is among the top domain names out of the 96,577 we have listed in the small business category.</p>
+            </div>      
+
+            <div class="" style="display: block;">
+                <img src="/web/bundles/login/img/MX.png" style="">
+                <p class="mpf widget-text" style=""> Mexico is a long way from Paris, but UVM.com is in the busiest and most upscale part of the internet.</p>
+            </div>
+-->
+        </div>
+<!-- End Widgets -->
+    </div>
+<!-- End Right Column -->
+<!-- End Content -->   
+        
+    <div id="footer" class="" style="">
+        <hr><hr>
+        <div id="phone-call"><span class="tblue">
+
+            <img src="/web/bundles/login/img/BannerT.jpg">
+        </div>
+        <hr>
+{% endblock %}

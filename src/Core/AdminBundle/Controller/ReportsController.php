@@ -22,6 +22,8 @@ class ReportsController extends Controller
             ORDER BY r.username ASC"
         );
 
+        //var_dump($query);
+
         $usuarios = $query->getResult();
 
         $i=0;

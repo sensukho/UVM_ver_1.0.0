@@ -31,7 +31,7 @@
                         <td align="left">Recordar usuario y contrase&ntilde;a</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td><input type="hidden" name="params" value="{{ params }}"></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -46,11 +46,11 @@
                         <td align="left"><a href="register"><button type="button" name="" value="" class="css3button">Registro</button></a></td>
                         <td align="right"><a href="resetpass"><button type="button" name="" value="" class="css3button">Recuperar contraseña</button></a></td>
                         -->
-                        <td align="left"><a href="register">Registro</a></td>
-                        <td align="right"><a href="resetpass">Recuperar contraseña</a></td>
+                        <td align="left"><a href="/web/register{{ params }}">Registro</a></td>
+                        <td align="right"><a href="/web/resetpass{{ params }}">Recuperar contraseña</a></td>
                     </tr>
                     <tr>
-                        <td colspan="2">&nbsp;<br /><font size="2">Para tener acceso a la red WiFi de UVM es necesario realizar el proceso de <a href="register"><b>REGISTRO</b></a> utilizando la liga que aparece arriba. <br><br>Si tienes problemas para registrarte o para navegar por favor acude al Centro de Cómputo de tu campus.</font></td>
+                        <td colspan="2">&nbsp;<br /><font size="2">Para tener acceso a la red WiFi de UVM es necesario realizar el proceso de <a href="/web/register{{ params }}"><b>REGISTRO</b></a> utilizando la liga que aparece arriba. <br><br>Si tienes problemas para registrarte o para navegar por favor acude al Centro de Cómputo de tu campus.</font></td>
 
                     </tr>
                 </table>
